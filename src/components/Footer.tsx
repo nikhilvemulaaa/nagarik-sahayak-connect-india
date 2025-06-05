@@ -1,6 +1,7 @@
 
 import { Github, Linkedin, Twitter, Mail, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -14,7 +15,7 @@ const Footer = () => {
               Nagarik Sahayak
             </h3>
             <p className="text-gray-400 mb-6 leading-relaxed max-w-md">
-              Empowering citizens through AI-driven civic engagement. Building the bridge between governance and people with cutting-edge technology.
+              Empowering citizens through AI-driven civic engagement. Building the bridge between governance and people with cutting-edge technology, privacy protection, and multilingual support.
             </p>
             <div className="flex space-x-4">
               <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white p-2">
@@ -36,33 +37,33 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">About Project</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Features</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Demo</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Documentation</a></li>
+              <li><Link to="/report" className="hover:text-white transition-colors">Report Issue</Link></li>
+              <li><Link to="/assistant" className="hover:text-white transition-colors">AI Assistant</Link></li>
+              <li><Link to="/profile" className="hover:text-white transition-colors">Profile</Link></li>
+              <li><Link to="/legal" className="hover:text-white transition-colors">Legal & Privacy</Link></li>
             </ul>
           </div>
 
-          {/* Hackathon Info */}
+          {/* Features */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Hackathon</h4>
+            <h4 className="text-lg font-semibold mb-4">Features</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">Team Details</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Technology Stack</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Implementation</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Future Roadmap</a></li>
+              <li><span className="hover:text-white transition-colors">Location Detection</span></li>
+              <li><span className="hover:text-white transition-colors">Photo Upload</span></li>
+              <li><span className="hover:text-white transition-colors">Multilingual AI</span></li>
+              <li><span className="hover:text-white transition-colors">Privacy Protection</span></li>
             </ul>
           </div>
         </div>
 
-        {/* Hackathon Badge */}
+        {/* Platform Info */}
         <div className="border-t border-gray-800 pt-8 mb-8">
           <div className="bg-gradient-to-r from-orange-500/10 to-green-500/10 border border-orange-500/20 rounded-lg p-6 text-center">
-            <h4 className="text-xl font-bold mb-2">🏆 IBM Virtual Hackathon 2024</h4>
-            <p className="text-gray-400 mb-4">Nagarik Sahayak - Revolutionizing Civic Engagement in India</p>
+            <h4 className="text-xl font-bold mb-2">🇮🇳 Digital India Initiative</h4>
+            <p className="text-gray-400 mb-4">Nagarik Sahayak - Revolutionizing Civic Engagement Across India</p>
             <div className="flex justify-center space-x-4 text-sm">
-              <span className="bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full">AI/ML</span>
-              <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full">Civic Tech</span>
+              <span className="bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full">AI/ML Powered</span>
+              <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full">Civic Technology</span>
               <span className="bg-green-500/20 text-green-300 px-3 py-1 rounded-full">Social Impact</span>
             </div>
           </div>
@@ -74,7 +75,7 @@ const Footer = () => {
             Made with <Heart className="w-4 h-4 text-red-500" /> for a better India
           </p>
           <p className="mt-2 text-sm">
-            © 2024 Nagarik Sahayak. Built for IBM Virtual Hackathon.
+            © 2024 Nagarik Sahayak. Empowering Citizens Through Technology.
           </p>
         </div>
       </div>
