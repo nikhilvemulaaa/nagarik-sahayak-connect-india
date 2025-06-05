@@ -14,24 +14,26 @@ import Navbar from "./components/Navbar";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
+const App = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/report" element={<ReportIssue />} />
-          <Route path="/assistant" element={<AIAssistant />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/legal" element={<Legal />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <TooltipProvider>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/report" element={<ReportIssue />} />
+            <Route path="/assistant" element={<AIAssistant />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/legal" element={<Legal />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <Toaster />
+          <Sonner />
+        </TooltipProvider>
       </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+    </QueryClientProvider>
+  );
+};
 
 export default App;
